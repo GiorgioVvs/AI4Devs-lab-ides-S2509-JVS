@@ -1,0 +1,94 @@
+.dashboard {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-header h2 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.add-candidate-btn {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.add-candidate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.add-candidate-btn:active {
+  transform: translateY(0);
+}
+
+.dashboard-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.welcome-card h3 {
+  color: #667eea;
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.welcome-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.features-list li {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-candidate-btn {
+    width: 100%;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+}
+

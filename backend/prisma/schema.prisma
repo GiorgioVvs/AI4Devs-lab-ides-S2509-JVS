@@ -18,3 +18,17 @@ model User {
   email String  @unique
   name  String?
 }
+
+model Candidate {
+  id              Int      @id @default(autoincrement())
+  first_name      String
+  last_name       String
+  email           String   @unique
+  phone           String
+  address         String
+  education       Json     // JSONB type in PostgreSQL
+  work_experience Json     // JSONB type in PostgreSQL
+  cv_file_path    String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
